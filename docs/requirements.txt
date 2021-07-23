@@ -57,6 +57,6 @@ toml==0.10.2
 typing-extensions==3.10.0.0
 ujson==4.0.2
 Unidecode==1.2.0
-urllib3==1.26.6
+urllib3==1.26.5
 wrapt==1.12.1
 yapf==0.31.0
