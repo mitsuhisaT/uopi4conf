@@ -34,7 +34,7 @@ Ubuntu デスクトップを Raspberry Pi 4B 、 Pi400 にインストールす�
 
 .. note::
 
-  有線LAN接続する場合は、LANケーブル(Gigabit Eter を使う場合は Category 6 以上)
+  有線LAN接続する場合は、LANケーブル(Gigabit Ethernet を使う場合は Category 6 以上)
 
 .. warning::
 
