@@ -11,6 +11,13 @@ Google Chrome WEBブラウザのオープンソース版 Chromium について�
 インストール
 ************
 
+〇〇を利用してももちろんインストールできますが、
+
+.. code-block:: shell
+
+  sudo apt install chromium
+
+で、インストールしました。
 
 ****
 設定
@@ -36,7 +43,7 @@ Google Chrome のオープンソース版の Chromium で
 解決策は、
 
 * 手動の同期
-  * `My Google Activity`_ から `Google Takeout`_ を使う
+    * `My Google Activity`_ から `Google Takeout`_ を使う
 * Chrome ブラウザを利用する
     * Linux用は *Intel CPU* は、ダウンロード可能
     * Raspberry Pi が採用している ARM アーキテクチャ用は **無し**
@@ -81,21 +88,7 @@ Atom で開いているファイルを5個くらい閉じて、 2回目で成功
 Setting up the build (ビルドの設定)
 -----------------------------------
 
-`gn gen out/pi4arm64` を実行すると `vi` 系エディタが起動するので **Faster builds** の設定、クロスコンパイルの設定と、 `API Keys`_ の **Acquiring Keys** の手順を行い `client ID` 、 `client secret` も設定した。以下は、*out/pi4arm64/args.gn* の設定内容で有る。
-
-.. code-block:: config
-
-  # Set build arguments here. See `gn help buildargs`.
-  is_debug = false
-  is_component_buils = true
-  symbol_level = 0
-  current_os = "mac"
-  current_cpu = "x64"
-  target_os = "linux"
-  target_cpu = "arm64"
-  google_api_key = "your_api_key"
-  google_default_client_id = "your_client_id"
-  google_default_client_secret = "your_client_secret"
+`gn gen out/pi4arm64` を実行すると `vi` 系エディタが起動するので **Faster builds** の設定、クロスコンパイルの設定と、 `API Keys`_ の **Acquiring Keys** の手順を行い `client ID` 、 `client secret` も設定した。
 
 --------------
 Build Chromium
@@ -117,6 +110,25 @@ Build Chromium
 - ２回目 CCache 有効：時間分秒 (target_os `linux`)
     - Intel mac では Linux/ARM64 は未だ NG
 
+以下は、*out/pi4arm64/args.gn* の２回目の設定内容です。
+
+.. code-block:: config
+
+  # Set build arguments here. See `gn help buildargs`.
+  is_debug = false
+  is_component_buils = true
+  symbol_level = 0
+  current_os = "mac"
+  current_cpu = "x64"
+  target_os = "linux"
+  target_cpu = "arm64"
+  google_api_key = "your_api_key"
+  google_default_client_id = "your_client_id"
+  google_default_client_secret = "your_client_secret"
+
+
+ビルド前の設定内容の確認コマンドの結果
+
 .. code-block:: shell
 
   gn gen --check out/pi4arm64
@@ -125,10 +137,11 @@ Build Chromium
   used by target //components/policy:chrome_manifest_bundle
   doesn't define a "copy_bundle_data" tool.
 
-
 ----------------------
 create install package
 ----------------------
+
+ビルドが成功したら、以下のコマンドを実行すれば、debパッケージが生成できたはず。
 
 .. code-block:: shell
 

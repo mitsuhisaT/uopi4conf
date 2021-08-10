@@ -19,7 +19,8 @@ Ubuntu デスクトップを Raspberry Pi 4B 、 Pi400 にインストールす�
 .. warning::
 
   `Raspberry Pi 4B`_ と `Raspberry Pi 400`_ の HDMI 接続端子は mini HDMI です。100円ショップなどの変換アダプタを使って接続しても良いです。
-  日本においては `Raspberry Pi 400`_ は、2021年7月23日時点では、 **まだ** 使用できません。
+  `Raspberry Pi 400`_ は、2021年7月13日に技術基準適合証明(技適)の工事設計認証が完了し、7月29日から `日本語キーボード版`_ が発売されています。
+  `技術基準適合証明(技適)番号020-210106`_ の形式又は名称は「Raspberry Pi 400」となっているので、英語配列キーボード版も発売されると良いなぁ(切望)。
 
 .. note::
 
@@ -133,3 +134,6 @@ Ubuntu desktop for Pi4 の準備
 .. _Raspberry Pi 400: https://www.raspberrypi.org/products/raspberry-pi-400-unit/
 .. _Raspberry Pi CM4: https://www.raspberrypi.org/products/compute-module-4/?variant=raspberry-pi-cm4001000
 .. _Ubuntu Desktop Raspberry Pi: https://ubuntu.com/download/raspberry-pi
+.. _技術基準適合証明(技適)番号020-210106: https://www.tele.soumu.go.jp/giteki/SearchServlet?pageID=jg01_01&PC=020&TC=N&PK=1&FN=210802N020&SN=%94%46%8F%D8&LN=36&R1=*****&R2=*****
+.. _Raspberry Pi 400 技適19-3: https://www.tele.soumu.go.jp/giteki/SearchServlet?pageID=jg01_01&PC=020&TC=N&PK=1&FN=210802N020&SN=%94%46%8F%D8&LN=36&R1=*****&R2=*****
+.. _日本語キーボード版: https://raspberry-pi.ksyic.com/news/page/nwp.id/102/
